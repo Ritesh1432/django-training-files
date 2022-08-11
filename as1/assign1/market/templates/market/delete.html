@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{%block content%}
+<div class='container'>
+    <h1>Delete Items from the Market List</h1>
+    <form action="" method='POST'>
+        {% csrf_token %}
+            <div class='form-group'>
+                <label for="itemname">Item Name:</label>
+                <input class='form-control' type="text" id='itemname' name='itemname'>
+            </div>
+            <input class='btn btn-primary' type="submit">
+    </form>
+</div>
+{% block homeImage %} {% endblock %}
+
+{% endblock %}

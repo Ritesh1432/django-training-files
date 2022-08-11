@@ -1,0 +1,10 @@
+from django.db import models
+
+
+# Create your models here.
+class Car(models.Model):
+    brand = models.CharField(max_length=40)
+    year = models.IntegerField()
+
+    def __str__(self):
+        return f"{self.brand} is made in {self.year}"

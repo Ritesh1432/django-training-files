@@ -1,0 +1,31 @@
+{% extends 'index.html' %} {% load static %} {% block navContent%}
+<a class="nav-item nav-link" href="/my_app/variable">Variable</a>
+{%endblock%} {% block content%}
+<!-- <h1>
+        <a href='{% url "my_app:home" %}'>Home</a>
+        <a href = '{%url "my_app:variable" %}'>Variable</a>
+        <a href = '{%url "index" %}'>Main Home</a>
+
+    </h1> -->
+
+<h1>My name is {{first_name}} {{last_name}}</h1>
+<h2>{{some_list.1}}</h2>
+<h2>{{some_dict.uname1}}</h2>
+<h2>{{first_name | upper}}</h2>
+<h2>{{first_name | capfirst}}</h2>
+<h2>{{first_name | length}}</h2>
+<h2>{{some_dict | addslashes }}</h2>
+
+<h1>Usernames:</h1>
+<ol>
+  {%for i in some_list%}
+  <li><h2>{{i}}</h2></li>
+  {%endfor%}
+</ol>
+
+<h1>Chain Condition</h1>
+{%for i in num_dict%} {%if i%}
+<h2>Exist: {{i}}</h2>
+{%else%}
+<h2>Does not exist {{i}}</h2>
+{%endif%} {%endfor%} {% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{%block content%}
+<table class="table table-hover">
+<thead>
+<tr>
+<th scope="col">Sr. No.</th>
+<th scope="col">Brand</th>
+<th scope="col">Year</th>
+</tr>
+</thead>
+<tbody>
+{% for rows in all_cars %}
+<tr>
+<th scope="row">{{ forloop.counter }}</th>
+<td>{{ rows.brand }}</td>
+<td>{{ rows.year }}</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+{% endblock %}
