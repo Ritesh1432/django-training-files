@@ -1,0 +1,68 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 2;
+}
+.wrapper{
+    margin-bottom: 50px;
+    z-index: 5;
+    padding-bottom: 500px;
+}
+.buttonClass{
+    color: white;
+}
+.buttonClass:hover{
+    text-decoration: none;
+    color: white;
+}
+.formLabelStyle{
+    font-size: 22px;
+    font-family:cursive;
+}
+.registerImage{
+    margin-top: 100px;
+    display: block;
+    margin: auto;
+    margin-left: 200px;
+   width: 100%;
+   height: 80%;
+
+}
+.loginImage{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    margin-left: 100px;
+
+}
+.navbarRightText{
+    display: inline;
+}
+body{
+    overflow-x: hidden;
+}
+.sellItemClass{
+    border: 1px solid black;
+    justify-content: center;
+    align-items: center;
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-radius: 20px;
+}
+.itemNameClass{
+    font-size: 30px;
+    font-weight: bold;
+    font-family: cursive;
+}
+.itemPriceClass{
+    font-size: 22px;
+
+}

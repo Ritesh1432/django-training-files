@@ -1,0 +1,26 @@
+{% extends 'base.html' %} {% block content %} {%load static%}
+<div class="container">
+  <h1 class="text-center">Sign In</h1>
+  <div class="row">
+    <div class="col-md-6 mt-5">
+      <form method="POST">
+        {% csrf_token %} {% for row in form %}
+        <div>
+          <p class="formLabelStyle">{{row.label}}:</p>
+        </div>
+        <p class="formInputStyle">{{row}}</p>
+        <p>{% endfor %}</p>
+
+        <p class="text-danger">{{errmessage}}</p>
+        <div class="mt-1">
+          <input class="btn btn-primary btn-lg" type="submit" value="Sign In" />
+        </div>
+        <br />
+      </form>
+    </div>
+    <div class="col-md-6">
+      <img src='{% static 'login.png' %}' alt="Login" class="loginImage">
+    </div>
+  </div>
+</div>
+{% block homeImage %} {% endblock %} {% endblock content %}
