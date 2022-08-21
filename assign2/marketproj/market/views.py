@@ -43,7 +43,7 @@ def market_view(request):
         if request.session.get('username') == str(itm.owner):
             own_items.append(itm)
     for i in fetched_items:
-        if request.session.get('username') != str(i.owner):
+        if i.owner == None:
             all_items.append(i)    
     context = {'all_items':all_items,'owner_items':own_items}
     return render(request,'market/market.html',context=context)

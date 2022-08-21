@@ -17,4 +17,4 @@ class Item(models.Model):
     owner = models.ForeignKey(User,on_delete=models.CASCADE,null=True)
 
     def __str__(self):
-        return f"{self.itemname},{self.barcode},{self.price}"
+        return f"{self.itemname},{self.barcode},{self.price},{self.owner}"
